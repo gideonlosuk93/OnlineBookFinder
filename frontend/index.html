@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Finder</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Add Google Maps API for Places Autocomplete -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places"></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">ANYBOOKONLINE</h1>
+    <p class="subtitle">Discover exclusive book deals and free resources.</p>
+  </header>
+
+  <section class="search-container">
+    <input type="text" id="searchInput" class="search-box" placeholder="Search for books...">
+  </section>
+
+  <section class="button-container">
+    <button id="featuredButton" class="button">Featured Books</button>
+    <button id="freePDFsButton" class="button">Free PDFs</button>
+  </section>
+
+  <!-- Books Grid for General Books -->
+  <section>
+    <div id="booksGrid" class="books-grid"></div>
+  </section>
+
+  <!-- Books Grid for eBooks -->
+  <section id="ebooksSection" class="hidden">
+    <h2 class="section-title">Top Free Downloads Of The Week</h2>
+    <div id="ebooksGrid" class="books-grid"></div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalButton" class="close-button">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalSummary"></p>
+      <a id="buyLink" href="#" target="_blank" class="buy-button">Get This Book</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 AnyBookOnline.com. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="ebooks.js"></script>
+</body>
+</html>
